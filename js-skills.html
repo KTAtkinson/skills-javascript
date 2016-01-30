@@ -230,13 +230,14 @@ function reverseString() {
 <p>
   When you click this button, pop up an alert box. <b>Remember, you cannot change the HTML!</b>
 </p>
+<script src="https://code.jquery.com/jquery.js"></script>
 
 <fieldset>
   <input type="button" class="tricky-to-find" value="Pop-Up Please!">
 </fieldset>
 
 <script>
-  // code here for above problem
+  $('.tricky-to-find').click(showAlert)
 </script>
 
 <div class="hint">
@@ -263,7 +264,12 @@ function reverseString() {
 </fieldset>
 
 <script>
-  // put your code here
+  var cuteCat = $('img#kittenz-rule')
+  function changeKittenToDog(evt) {
+     cuteCat.attr('src', 'http://vignette4.wikia.nocookie.net/lotrminecraftmod/images/3/32/Cute-Dog-dogs-13286656-1024-768.jpg/revision/latest?cb=20150222011858')
+  }
+ 
+  cuteCat.dblclick(changeKittenToDog)
 </script>
 
 <div class="hint">
@@ -296,7 +302,13 @@ function reverseString() {
 </fieldset>
 
 <script>
-  // put your code here
+  function showPorcupine(evt) {
+    var porcupine = $("#cute-porcupine-image");
+    setTimeout(function(){porcupine.fadeIn()}, 100);
+  }
+
+  $('#make-a-porcupine').click(showPorcupine);
+  
 </script>
 
 <div class="hint">
